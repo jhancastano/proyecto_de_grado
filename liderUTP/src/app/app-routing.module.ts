@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'etica-ciudadania', loadChildren: './pages/etica-ciudadania/etica-ciudadania.module#EticaCiudadaniaPageModule' },
   { path: 'etica-moral', loadChildren: './pages/etica-moral/etica-moral.module#EticaMoralPageModule' },
   { path: 'filosofia-liderazgo', loadChildren: './pages/filosofia-liderazgo/filosofia-liderazgo.module#FilosofiaLiderazgoPageModule' },
-  { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' },
+  { path: 'home1', loadChildren: './pages/home/home.module#HomePageModule' },
   { path: 'impratancia-relaciones-humanas', loadChildren: './pages/impratancia-relaciones-humanas/impratancia-relaciones-humanas.module#ImpratanciaRelacionesHumanasPageModule' },
   { path: 'info-institucional', loadChildren: './pages/info-institucional/info-institucional.module#InfoInstitucionalPageModule' },
   { path: 'inicio', loadChildren: './pages/inicio/inicio.module#InicioPageModule' },
@@ -45,6 +45,7 @@ const routes: Routes = [
   { path: 'test-liderazgo', loadChildren: './pages/test-liderazgo/test-liderazgo.module#TestLiderazgoPageModule' },
   { path: 'tipo-liderazgo', loadChildren: './pages/tipo-liderazgo/tipo-liderazgo.module#TipoLiderazgoPageModule' },
   { path: 'valores-institucionales', loadChildren: './pages/valores-institucionales/valores-institucionales.module#ValoresInstitucionalesPageModule' },
+  { path: 'ser-humano-como-ente-social', loadChildren: './pages/ser-humano-como-ente-social/ser-humano-como-ente-social.module#SerHumanoComoEnteSocialPageModule' },
 ];
 
 @NgModule({
