@@ -1,3 +1,65 @@
 <ion-app>
+  
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-menu-button slot="start"></ion-menu-button> 
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  
+  </ion-header>
   <ion-router-outlet></ion-router-outlet>
+  <ion-content>
+    <ion-menu side="start" menuId="first">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <img src="../../assets/images/logoutp.png" alt="">
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item >
+            <ion-icon name="home"></ion-icon>
+            Página Principal</ion-item>
+          <ion-item>
+            <ion-icon name="camera"></ion-icon>
+              Lector QR</ion-item>
+          <ion-item>
+            <ion-icon name="albums"></ion-icon>Módulos</ion-item>
+          <ion-item><ion-icon name="information-circle"></ion-icon> Más info</ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+    
+    
+   
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home"  [routerLink]="['/relaciones-humanas']">
+          <ion-icon name="home"></ion-icon>
+          <ion-label>Inicio</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="book"  [routerLink]="['/home1']">
+          <ion-icon name="book"></ion-icon>
+          <ion-label>Universidad</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="people" [routerLink]="['/contact']">
+          <ion-icon name="people"></ion-icon>
+          <ion-label>Rela.Hum</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="about" [routerLink]="['/about']">
+          <ion-icon name="create"></ion-icon>
+          <ion-label>etica</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="Liderazgo" [routerLink]="['/liderazgo']">
+          <ion-icon name="hand"  ></ion-icon>
+          <ion-label>Liderazgo</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-content>
 </ion-app>
