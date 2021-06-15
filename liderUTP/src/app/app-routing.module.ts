@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuardService } from "./services/auth-guard.service";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
-  { path: 'about', loadChildren: './pages/about/about.module#AboutPageModule' },
+  { path: 'about', loadChildren: './pages/about/about.module#AboutPageModule',canActivate: [AuthGuardService] },
   { path: 'bases-para-ser-lider', loadChildren: './pages/bases-para-ser-lider/bases-para-ser-lider.module#BasesParaSerLiderPageModule' },
   { path: 'camera-qr', loadChildren: './pages/camera-qr/camera-qr.module#CameraQRPageModule' },
   { path: 'caracteristicas-lider', loadChildren: './pages/caracteristicas-lider/caracteristicas-lider.module#CaracteristicasLiderPageModule' },
@@ -46,6 +47,8 @@ const routes: Routes = [
   { path: 'tipo-liderazgo', loadChildren: './pages/tipo-liderazgo/tipo-liderazgo.module#TipoLiderazgoPageModule' },
   { path: 'valores-institucionales', loadChildren: './pages/valores-institucionales/valores-institucionales.module#ValoresInstitucionalesPageModule' },
   { path: 'ser-humano-como-ente-social', loadChildren: './pages/ser-humano-como-ente-social/ser-humano-como-ente-social.module#SerHumanoComoEnteSocialPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+
 ];
 
 @NgModule({

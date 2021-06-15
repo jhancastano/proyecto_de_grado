@@ -1,0 +1,48 @@
+<ion-content>
+  <img src="../../assets/images/logoutp.png" alt="" />
+<!-- 
+  <form [formGroup]="loginForm">
+    <ion-item lines="full">
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input formControlName="username" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input formControlName="password" type="password" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="login()" type="submit" color="danger" expand="block"
+          >ingresar</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </form> -->
+  <form [formGroup]="loginForm">
+
+    <ion-list>
+        <ion-item>
+            <ion-label position="stacked">Username</ion-label>
+            <ion-input formControlName="username" type="text">
+            </ion-input>
+        </ion-item>
+
+
+        <ion-item>
+            <ion-label position="stacked">Password</ion-label>
+            <ion-input formControlName="password" type="text">
+            </ion-input>
+        </ion-item>
+
+    </ion-list>
+
+    <ion-row class="signin">
+        <ion-col>
+            <ion-button (click)="login()" color="primary" shape="full" expand="block">Sign In</ion-button>
+        </ion-col>
+    </ion-row>
+
+</form>
+</ion-content>
