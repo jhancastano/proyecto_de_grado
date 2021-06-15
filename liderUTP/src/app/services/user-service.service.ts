@@ -12,12 +12,12 @@ export class UserServiceService {
   httpOptions = {
     headers: new HttpHeaders({
       "Content-Type": "application/x-www-form-urlencoded",
-      "Accept-Encoding": "gzip, deflate, br",
+     // "Accept-Encoding": "gzip, deflate, br",
      // Authorization: "my-auth-token",
-      Host: "plataforma.utp.edu.co",
-      "Sec-Fetch-Dest": "empty",
-      "Sec-Fetch-Mode": "cors",
-      "Sec-Fetch-Site": "cross-site",
+     // Host: "plataforma.utp.edu.co",
+     // "Sec-Fetch-Dest": "empty",
+      //"Sec-Fetch-Mode": "cors",
+      //"Sec-Fetch-Site": "cross-site",
     }),
   };
   constructor(private http: HttpClient) {}
