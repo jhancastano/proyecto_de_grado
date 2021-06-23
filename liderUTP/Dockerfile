@@ -1,17 +1,14 @@
-FROM node:14-alpine
+FROM node:16-alpine
 
 ENV IONIC_VERSION=5.4.16
-
-
-EXPOSE 8100
+ENV PORT=8200
 
 WORKDIR /app
-
-COPY . /app
+COPY package*.json  ./
 
 RUN npm install -g cordova ionic@${IONIC_VERSION} 
-RUN npm install && rm -rf /root/.npm 
+RUN npm install  
 
-HEALTHCHECK --interval=10s --timeout=3s --start-period=30s CMD curl -f http://localhost:8100 || exit 1
+COPY . .
 
-CMD ["ionic","serve"]
+CMD [ "ionic" ,"serve","--port=${PORT}","--address","0.0.0.0"]
