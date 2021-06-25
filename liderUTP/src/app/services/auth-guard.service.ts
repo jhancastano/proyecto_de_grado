@@ -8,6 +8,7 @@ import {AuthServiceService} from './auth-service.service';
 export class AuthGuardService {
   constructor(private auth:AuthServiceService,private router: Router) {}
   canActivate(route: ActivatedRouteSnapshot): boolean {
+    console.log(this.auth.loggedIn)
    return this.auth.loggedIn;
   }
 }
